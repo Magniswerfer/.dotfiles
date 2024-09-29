@@ -18,7 +18,7 @@
             nixosConfigurations = {
                 t480 = lib.nixosSystem {
                     inherit system;
-                    modules = [ ./configuration.nix ];
+                    modules = [ ./configuration.nix ./t480/t480-config.nix ];
 
                 };
                 gaming-pc = lib.nixosSystem {
