@@ -1,8 +1,21 @@
-{ config, pkgs, ... }:
+{ config, pkgs, pkgs-unstable, ... }:
 
 {
-    imports =
+
+  imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
+
+  environment.systemPackages = 
+    (with pkgs; [
+
+    ])
+
+    ++
+
+    (with pkgs-unstable; [
+      neovim
+    ]);
+
 }
