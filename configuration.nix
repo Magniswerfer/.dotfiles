@@ -128,6 +128,15 @@
     vscode
   ];
 
+  #programs.zsh.enable = true;
+  #users.defaultUserShell = pkgs.zsh;
+  users.defaultUserShell = pkgs.zsh;
+  environment.shells = with pkgs; [ zsh ];
+  programs.zsh.enable = true;
+
+  # Change the default shell to be user-specific.
+  users.users.magnushk.shell = pkgs.zsh;
+
   # MullvadVPN config
   services.mullvad-vpn.enable = true;
 
