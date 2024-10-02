@@ -11,7 +11,7 @@
     ++
 
     (with pkgs-unstable; [
-      
+      zed-editor
     ]);
 
     virtualisation.docker.enable = true;

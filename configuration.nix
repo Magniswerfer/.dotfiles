@@ -126,6 +126,7 @@
     signal-desktop
     throttled
     vscode
+    zoom-us
   ];
 
   #programs.zsh.enable = true;
