@@ -8,22 +8,22 @@
         home-manager.inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    outputs = {self, nixpkgs, nixpkgs-unstable, home-manager, ...}: 
-    
-        let 
+    outputs = {self, nixpkgs, nixpkgs-unstable, home-manager, ...}:
+
+        let
             system = "x86_64-linux";
             lib  = nixpkgs.lib;
             pkgs = nixpkgs.legacyPackages.${system};
             pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
-        
+
         in {
             nixosConfigurations = {
                 t480 = lib.nixosSystem {
                     inherit system;
-                    modules = [ 
-                        ./configuration.nix 
+                    modules = [
+                        ./configuration.nix
                         ./dev.nix
-                        ./t480/t480-config.nix 
+                        ./t480/t480-config.nix
                     ];
                     specialArgs = {
                         inherit pkgs-unstable;
@@ -31,8 +31,19 @@
                 };
                 gaming-pc = lib.nixosSystem {
                     inherit system;
-                    modules = [ 
-                        ./configuration.nix 
+                    modules = [
+                        ./configuration.nix
+                    ];
+                    specialArgs = {
+                        inherit pkgs-unstable;
+                    };
+                };
+                work-pc = lib.nixosSystem {
+                    inherit system;
+                    modules = [
+                        ./configuration.nix
+                        ./dev.nix
+                        ./work-pc/workpc-config.nix
                     ];
                     specialArgs = {
                         inherit pkgs-unstable;
