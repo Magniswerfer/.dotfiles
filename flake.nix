@@ -24,6 +24,7 @@
                         ./configuration.nix
                         ./dev.nix
                         ./t480/t480-config.nix
+                        ./intel.nix
                     ];
                     specialArgs = {
                         inherit pkgs-unstable;

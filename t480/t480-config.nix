@@ -2,12 +2,14 @@
 
 {
 
+  networking.hostName = "t480"; # Define your hostname.
+
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
 
-  environment.systemPackages = 
+  environment.systemPackages =
     (with pkgs; [
 
     ])

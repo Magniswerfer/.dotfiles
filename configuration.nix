@@ -10,7 +10,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "t480"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -93,9 +92,6 @@
     #  thunderbird
     ];
   };
-  
-  # Power management for Intel / Thinkpad
-  services.throttled.enable = true;
 
   # Monitor Firmware Updates
   services.fwupd.enable = true;
@@ -124,7 +120,6 @@
     nicotine-plus
     obsidian
     signal-desktop
-    throttled
     vscode
     zoom-us
   ];
