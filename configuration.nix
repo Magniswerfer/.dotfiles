@@ -122,6 +122,7 @@
     signal-desktop
     vscode
     zoom-us
+    youtube-music
   ];
 
   #programs.zsh.enable = true;

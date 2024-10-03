@@ -13,6 +13,9 @@
     (with pkgs; [
         thunderbird
         chromium
+        get-google-fonts
+        davinci-resolve
+        darktable
     ])
 
     ++

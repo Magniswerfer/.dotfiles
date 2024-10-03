@@ -11,7 +11,6 @@
   home.packages = [
     pkgs.zsh
     pkgs.oh-my-zsh
-    pkgs.google-fonts
   ];
 
   # Handling git hehe
