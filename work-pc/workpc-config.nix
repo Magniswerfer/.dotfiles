@@ -11,13 +11,15 @@
 
   environment.systemPackages =
     (with pkgs; [
-
+        thunderbird
+        chromium
     ])
 
     ++
 
     (with pkgs-unstable; [
       neovim
+      figma-linux
     ]);
 
 }

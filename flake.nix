@@ -45,6 +45,8 @@
                         ./configuration.nix
                         ./dev.nix
                         ./work-pc/workpc-config.nix
+                        ./fonts.nix
+                        ./flatpak.nix
                     ];
                     specialArgs = {
                         inherit pkgs-unstable;
